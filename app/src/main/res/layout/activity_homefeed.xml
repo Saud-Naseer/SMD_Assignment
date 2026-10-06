@@ -49,18 +49,23 @@
                 android:layout_centerVertical="true"/>
         </RelativeLayout>
 
-        <!-- The 5 top tabs -->
+        <!-- The 5 top tabs] -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal">
-            <!-- Home Tab -->
+            <!-- Home Tab (Active) -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="#0B5F63"/>
+                <!-- Replace with exact Home icon to meet UI Accuracy -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:tint="#0B5F63"/>
             </LinearLayout>
             <!-- Friends Tab -->
             <LinearLayout
@@ -68,7 +73,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_cc_am"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:tint="#555555"/>
             </LinearLayout>
             <!-- Marketplace Tab -->
             <LinearLayout
@@ -76,7 +86,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_manage"/>
+                <!-- Replace with exact Marketplace icon[cite: 25] -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:tint="#555555"/>
             </LinearLayout>
             <!-- Notifications Tab -->
             <LinearLayout
@@ -84,7 +99,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_popup_reminder"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:tint="#555555"/>
             </LinearLayout>
             <!-- Menu Tab -->
             <LinearLayout
@@ -92,7 +112,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_sort_by_size"/>
+                <!-- Replace with exact Menu icon[cite: 25] -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:tint="#555555"/>
             </LinearLayout>
         </LinearLayout>
 

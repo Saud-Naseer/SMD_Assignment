@@ -12,7 +12,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Log in leads to Home[cite: 24]
         findViewById<Button>(R.id.btnLogin).setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, HomefeedActivity::class.java))
         }
 
         // "Create new account" leads to Sign up[cite: 24]
