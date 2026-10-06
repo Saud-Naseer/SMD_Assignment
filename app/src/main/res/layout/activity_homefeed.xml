@@ -1,0 +1,363 @@
+<!-- activity_home.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DBDBDB">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kinnect"
+                android:textColor="#0B5F63"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <!-- Search Icon Placeholder -->
+            <ImageView
+                android:id="@+id/icSearch"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_toStartOf="@+id/icMessenger"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_centerVertical="true"/>
+
+            <!-- Messenger Icon Placeholder -->
+            <ImageView
+                android:id="@+id/icMessenger"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <!-- The 5 top tabs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <!-- Home Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="#0B5F63"/>
+            </LinearLayout>
+            <!-- Friends Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_cc_am"/>
+            </LinearLayout>
+            <!-- Marketplace Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_manage"/>
+            </LinearLayout>
+            <!-- Notifications Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_popup_reminder"/>
+            </LinearLayout>
+            <!-- Menu Tab -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_sort_by_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Active Tab Indicator -->
+        <View
+            android:layout_width="70dp"
+            android:layout_height="3dp"
+            android:background="#0B5F63"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- "What's on your mind" Input Box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <!-- Avatar placeholder -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#0B5F63"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvCreatePost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="What's on your mind, Jacob?"
+                    android:padding="12dp"
+                    android:background="@drawable/ic_launcher_background"
+                    android:textColor="#555555"/>
+
+                <!-- Picture icon placeholder -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@android:drawable/ic_menu_gallery"/>
+            </LinearLayout>
+
+            <!-- Stories Row -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Create Story Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginEnd="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/btnCreateStory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#E0F2F1"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="Create story"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Omar Farooq Story -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginEnd="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#2C3E50">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Omar Farooq"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="8dp"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Sara Iqbal Story -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginEnd="8dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="#D7BDE2"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Hamza Ali Story -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="12dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="#A2D9CE"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Hardcoded Feed Post: Lina Marsh -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- Post Header -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:id="@+id/imgAvatarLM"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#7D3C98"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvPostName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imgAvatarLM"
+                        android:text="Lina Marsh is at Clifton Beach"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imgAvatarLM"
+                        android:layout_below="@id/tvPostName"
+                        android:text="2h"
+                        android:textSize="12sp"
+                        android:textColor="#555555"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                <!-- Post Content -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sunset walk with the crew. Worth every grain of sand in my shoes."
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Post Engagement Stats -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aisha and 1.2K others"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#555555"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="86 comments • 12 shares"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="#555555"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DBDBDB"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Like, Comment, Share -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/btnLike"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Like" android:textColor="#555555"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnComment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comment" android:textColor="#555555"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Share" android:textColor="#555555"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

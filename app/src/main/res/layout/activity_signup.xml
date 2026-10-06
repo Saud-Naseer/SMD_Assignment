@@ -16,7 +16,7 @@
             android:text="What's your name and birthday?"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp"/> <!-- Replicates header[cite: 3] -->
+            android:layout_marginBottom="24dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,6 +36,26 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:hint="Last name"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:hint="Email"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:hint="Password"/>
         </LinearLayout>
 
         <Button
